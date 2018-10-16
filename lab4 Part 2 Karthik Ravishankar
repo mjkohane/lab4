@@ -1,1 +1,8 @@
 
+  #Part 2
+library(tidyverse)
+av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
+# I investigated "Out of 173 listed Avengers, my analysis found that 69 had died at least one time after they joined the team.5 That’s about 40 percent of all people who have ever signed on to the team. "
+#There are 69 Deaths in column Death1. This gives us the number of people who died at least once. This means 40% of the avengers died atleast once 
+  nrow(av[av$Death1 == "YES",])
+  (nrow(av[av$Death1 == "YES",]) / nrow(av))*100
