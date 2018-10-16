@@ -1,1 +1,21 @@
+##Part 2 
 
+##"I counted 89 total deaths", this is the statement I have decided to check for accuracy.  According to the below code there are are a total of 89 deaths, so the articles statement was correct.
+```{r}
+
+av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
+
+av
+
+
+nrow(av[av$Death1 == "YES",])
+nrow(av[av$Death2 == "YES",])
+nrow(av[av$Death3 == "YES",])
+nrow(av[av$Death4 == "YES",])
+nrow(av[av$Death5 == "YES",])
+
+
+
+```
+
+##The sum of this code equals 89 so the statement in the article is correct.
